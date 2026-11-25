@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Sol Chuva</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">☀️🌧️</div>
+  <h1 id="nomePortal">Sol Chuva</h1>
+</header>
+
+<div class="busca">
+  <input id="cidade" list="listaCidades" placeholder="Digite o nome de uma cidade...">
+  <datalist id="listaCidades">
+    <option value="Brasília">
+    <option value="Florianópolis">
+    <option value="São Paulo">
+    <option value="Rio de Janeiro">
+    <option value="Salvador">
+    <option value="Porto Alegre">
+  </datalist>
+  <button id="btnBuscar">Buscar</button>
+</div>
+<p id="aviso">⚠️ Digite o nome de uma cidade para buscar.</p>
+
+<div class="chips">
+  <button class="chip" onclick="buscarChip('Brasília')">Brasília</button>
+  <button class="chip" onclick="buscarChip('Florianópolis')">Florianópolis</button>
+  <button class="chip" onclick="buscarChip('São Paulo')">São Paulo</button>
+  <button class="chip" onclick="buscarChip('Rio de Janeiro')">Rio de Janeiro</button>
+  <button class="chip" onclick="buscarChip('Salvador')">Salvador</button>
+  <button class="chip" onclick="buscarChip('Porto Alegre')">Porto Alegre</button>
+</div>
+
+<div id="loading">Carregando dados do clima...</div>
+
+<div class="card" id="resultado">
+  <h2 id="nomeCidade">Brasília</h2>
+  <p id="estado">Distrito Federal - Brasil</p>
+  <div class="temp"><span id="tempAtual">20</span>°C</div>
+  <p id="descricao">Céu limpo</p>
+  <div class="detalhes" id="detalhes"></div>
+</div>
+
+<h3>Previsão para os próximos 10 dias</h3>
+<div class="previsao" id="previsao"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
